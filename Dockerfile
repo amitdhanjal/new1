@@ -7,7 +7,7 @@ RUN apt-get install -y python3.6
 RUN apt-get install -y vim
 RUN apt-get install -y python-pip
 
-COPY requirements.txt $INSTALL_PATH/requirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 WORKDIR /application
