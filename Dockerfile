@@ -9,4 +9,6 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 WORKDIR /application
 ENV PORT 8080
-CMD python app.py
+Expose 8080
+Entrypoint python
+Run app.py
