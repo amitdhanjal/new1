@@ -11,4 +11,4 @@ WORKDIR /application
 ENV PORT 8080
 Expose 8080
 Entrypoint python
-Run app.py
+CMD app.py
