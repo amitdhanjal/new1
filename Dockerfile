@@ -8,5 +8,7 @@ RUN apt-get install -y python-pip
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 WORKDIR /application
+ENV PORT 8080
+ENV HOST 0.0.0.0
 Expose 8080
 CMD python app.py
