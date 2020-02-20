@@ -1,19 +1,21 @@
-apiVersion: apps/v1
-kind: Deployment
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
 metadata:
-  name: application
+  name: "myapp"
+  namespace: "default"
+  labels:
+    app: "myapp"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: application
+      app: "myapp"
   template:
     metadata:
       labels:
-        app: application
+        app: "myapp"
     spec:
       containers:
-      - name: app
-        image: 'gcr.io/electric-clone-249408/myimage'
-        ports:
-        - containerPort: 8080
+      - name: "myimage-sha256-1"
+        image: "gcr.io/electric-clone-249408/myimage@sha256:9d99a18da41c95d42a30f3ca627eea3f5099dd4afef1e53743154197a01c0e73"
