@@ -6,7 +6,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy:stable"
   args:
   - run
-  - --filename=[KUBERNETES_CONFIG_FILE]
+  - --filename=KUBERNETES_CONFIG_FILE
   - --image='gcr.io/electric-clone-249408/myimage'
   - --location=us-central1-a
   - --cluster=my-k8s-cluster
