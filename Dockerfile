@@ -10,5 +10,4 @@ RUN pip install -r requirements.txt
 WORKDIR /application
 ENV PORT 8080
 Expose 8080
-Entrypoint python
-CMD app.py
+Entrypoint ["python" , "app.py"]
