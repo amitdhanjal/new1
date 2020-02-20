@@ -8,6 +8,6 @@ RUN apt-get install -y python-pip
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 WORKDIR /application
-ENV PORT 8080
+#ENV PORT 8080
 Expose 8080
 Entrypoint ["python" , "app.py"]
